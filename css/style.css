@@ -78,13 +78,13 @@
 
 .section-2 h2 {
     color: #152A54;
-    font-size: 42px;
+    /* font-size: 42px; */
     font-weight: 700;
 }
 
 .section-2 p {
     color: #3D5579;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 400;
 }
 
@@ -274,6 +274,70 @@ body {
 }
 
 /* section 2 */
+/* services */
+.services {
+    i {
+        color: #B5BDC9;
+        font-size: 42px;
+        transition: 0.3s;
+    }
+
+    img {
+        transition: 0.1s;
+        filter: grayscale(100%);
+
+    }
+
+    .item {
+        border-radius: 18px;
+        background: rgba(220, 224, 229, 0.20);
+        backdrop-filter: blur(8.5px);
+        overflow: hidden;
+    }
+
+    .item:hover i {
+        color: #62C4AA;
+        font-size: 38px;
+
+    }
+
+    .item:hover img {
+        filter: grayscale(0%);
+
+    }
+
+    .service-text {
+        border-radius: 18px;
+        border: 1px solid #62C4AA;
+        height: 100%;
+
+        p {
+            color: #2E3238;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .btn-outline {
+            border-radius: 6px;
+            border: 1px solid #65ACB7;
+            color: #3A405A;
+            padding: 16px;
+
+        }
+
+        .call-us {
+            padding: 16px;
+
+        }
+    }
+
+    @media (max-width:600px) {
+        .order-n1 {
+            order: -1 !important;
+        }
+    }
+}
 
 /* our values */
 .our-values {
@@ -340,7 +404,13 @@ body {
     max-height: 100px;
     margin: 10px;
     filter: grayscale(100%);
+    transition: 0.2s;
     /* Optional: For a grayscale effect */
+}
+
+.compliance-logos img:hover {
+    filter: grayscale(0%);
+
 }
 
 /* partner*/
@@ -350,9 +420,23 @@ body {
 }
 
 .partner .owl-carousel2 .item {
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.partner .owl-carousel2 .item img {
+    height: 40px !important;
+    width: 100% !important;
+    filter: grayscale(100%);
+
+}
+
+.partner .owl-carousel2 .item:hover img {
+    filter: grayscale(0%);
+
 }
 
 /* timeline */
