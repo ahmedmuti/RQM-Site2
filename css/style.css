@@ -1,0 +1,460 @@
+:root {
+    --main-color: #152A54;
+    --main-color2: #3D5579;
+    --second-color: #4C89D5;
+    --secondary: #f15a2c;
+    --qatar-book: qatar-font-book;
+    --qatar-bold: "qatar-font-bold";
+    --dark-color: #0E171A;
+    --border-color: #2C2C2C;
+    --second-bg: #F7F8FB;
+    --gray-color: #6C6C6C;
+    --gray-color2: #8890A4;
+    --font-small: 2vw;
+    --font-medium: 3vw;
+    --font-large: 4vw;
+    --padding: 2vh;
+}
+
+.container {
+    transition: all 0.2s;
+}
+
+/* start of the global style  */
+.gary-color {
+    color: var(--gray-color);
+}
+
+.gary-color-2 {
+    color: var(--gray-color2);
+}
+
+.second-bg {
+    background-color: #F7F8FB;
+}
+
+.font-book {
+    font-family: var(--qatar-book);
+}
+
+.font-bold {
+    font-family: var(--qatar-bold);
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.bg-color {
+    background-color: var(--main-color);
+}
+
+.main-bg {
+    background: var(--main-color);
+    backdrop-filter: blur(4px);
+}
+
+.dark-color {
+    color: var(--dark-color);
+}
+
+.border-color {
+    border: 1px solid var(--border-color);
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.my-100 {
+    margin: 100px 0;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+/* end of the global style  */
+
+.section-2 h2 {
+    color: #152A54;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.section-2 p {
+    color: #3D5579;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+body {
+    font-family: "Almarai", sans-serif;
+    /* font-size: var(--font-medium) */
+}
+
+/* .text-center h1 {
+    font-size: var(--font-large);
+    margin-bottom: var(--padding);
+}
+
+.text-center p {
+    font-size: var(--font-small);
+    margin-bottom: var(--padding);
+}
+
+.btn {
+    font-size: var(--font-small);
+    padding: 1vh 2vw;
+    border-radius: 2vw !important;
+} */
+
+/* start of the navbar style */
+#navbar {
+    transition: 0.3s;
+    margin: auto;
+}
+
+.scrolled {
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(4px);
+    margin-top: 0 !important;
+    /* Set to desired color */
+}
+
+.nav-link:not(.lang) {
+    padding: 5px 10px !important;
+
+}
+
+.nav-link {
+    color: #3D5579;
+    font-family: Almarai;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+
+}
+
+.nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease !important;
+    /* Smooth transition for color changes */
+}
+
+.nav-link.active {
+    border-radius: 10px;
+    background: var(--main-color) !important;
+    color: #fff !important;
+
+}
+
+@keyframes changeColor {
+
+    0%,
+    20% {
+        color: #fff;
+
+        border-radius: 10px;
+        background: var(--main-color);
+        color: #fff !important;
+
+    }
+
+    40%,
+    60% {
+        color: #e8e1e1;
+
+    }
+
+    80%,
+    100% {
+        color: #fff;
+
+        border-radius: 10px;
+        background: var(--main-color);
+        color: #fff !important;
+
+
+    }
+}
+
+
+.navbar span {
+    display: inline-block;
+    padding: 0 3px;
+    transition: transform 0.5s !important;
+}
+
+.navbar ul .nav-link:hover {
+    animation: changeColor 0.5s forwards;
+}
+
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-nav ui li {
+    margin: 15px 0;
+}
+
+.nav-contact {
+    border-radius: 32.006px;
+    /* background: #FFF;
+    color: #15171A; */
+    font-weight: 700;
+}
+
+/* start of the navbar style */
+
+/* start of the home section (Slider) */
+
+
+.swiper-slide a.down {
+    display: flex;
+    width: 36.006px;
+    height: 36.006px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+/* .swiper-slide {
+    clip-path: polygon(0 0, 100% 0, 100% 53%, 100% 73%, 100% 84%, 0 100%);
+    overflow: hidden;
+    border-bottom-left-radius: 2% !important;
+    border-bottom-right-radius: 2% !important;
+
+    @media (max-width:700px) {
+        clip-path: polygon(0 0, 100% 0, 100% 53%, 100% 73%, 100% 84%, 0 100%);
+
+    }
+} */
+
+/* .header-img { */
+/* width: 100% !important;
+    height: 100% !important; */
+/* object-fit: cover !important; */
+/* object-position: center center; */
+
+
+/* } */
+
+.swiper-pagination-bullet {
+    width: 17px !important;
+    height: 17px !important;
+}
+
+@media (max-width:992px) {
+    .navbar ul {
+        /* background-color: var(--main-color); */
+        padding: 20px 0;
+        margin: 10px 0;
+    }
+
+    .swiper-pagination-vertical.swiper-pagination-bullets,
+    .swiper-vertical>.swiper-pagination-bullets {
+        top: auto;
+        bottom: 70px !important;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+}
+
+.call-us {
+    border-radius: 6px;
+    background: #65ACB7 !important;
+    border: none;
+    color: #fff;
+    padding: 8px 17px;
+}
+
+/* section 2 */
+
+/* our values */
+.our-values {
+    h2 {
+        color: #152A54;
+        font-family: Almarai;
+        font-size: 32px;
+        font-weight: 700;
+
+    }
+}
+
+/* why rqm */
+.arrows .border:hover {
+    background-color: #d9d9d933;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.swiper {
+    height: 106vh !important;
+
+    @media (max-width:600px) {
+        height: 100vh !important;
+    }
+}
+
+.swiper.mySwiper2 {
+    /* overflow: visible !important; */
+    height: auto !important;
+}
+
+.swiper.mySwiper3 {
+    height: auto !important;
+}
+
+
+.swiper.mySwiper2 .swiper-slide {
+    height: auto;
+}
+
+.swiper.mySwiper2 h3 {
+    color: #152A54 !important;
+}
+
+.swiper.mySwiper2 p {
+    color: #3D5579;
+    font-family: Almarai;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+
+}
+
+.swiper.mySwiper2 img {
+    height: 300px !important;
+}
+
+
+/* compliance-logos */
+.compliance-logos img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    margin: 10px;
+    filter: grayscale(100%);
+    /* Optional: For a grayscale effect */
+}
+
+/* partner*/
+
+.partner .item .item {
+    background: linear-gradient(180deg, #fbfbfb 0%, #fff 52.5%, #fff 100%);
+}
+
+.partner .owl-carousel2 .item {
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* timeline */
+/* General styling */
+
+
+
+/* Contact button styling */
+.contact-btn {
+    margin-top: 40px;
+}
+
+.contact-btn a {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 17.336px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.contact-btn a:hover {
+    background-color: #007bff;
+}
+
+/* contact  */
+.contact-form .container {
+    border-radius: var(--font-line-height-2XL, 30px);
+    background: #F7F8FB;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(2, 2, 30, 0.20);
+    border-radius: 0;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.contact-form label {
+    color: rgba(2, 2, 30, 0.50);
+
+    font-family: var(--qatar-book);
+}
+
+footer {
+
+    background: url('../imgs/footer-bg.svg'), linear-gradient(to bottom, var(--main-color), var(--main-color));
+    background-repeat: repeat-x;
+}
+
+.footer i {
+    font-size: 20px;
+}
+
+@media (max-width:500px) {
+    .footer h5 {
+        font-size: 16px;
+    }
+
+    .footer li,
+    .footer p {
+        font-size: 14px !important;
+    }
+
+    .partner img {
+        width: 47% !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 50px;
+    /* box-shadow: 0 0 40px 40px #048081; */
+}
+
+::-webkit-scrollbar-track {
+    /* background-color: var(--second-color); */
+    box-shadow: 0 0 5px #00000069 inset;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.loading {
+    display: flex;
+    z-index: 9999;
+    background-color: #fff;
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="مستقبل رقمي يتحقق بعقول مبتكرة و خبره و اسعة نسعى الى تقديم حلول و منتجات رقمية تساعدك على تحسين جودة اعمالك و تساهم في تحقيق اهدافك و تطلعاتك للعصر الرقمي">
+    <meta name="keywords"
+        content="تطوير التطبيقات, هواتف ذكية, انترنت الأشياء, الأمن السبرانى, تحليل البيانات, شركة تقنيةو الحوسبة الحسابية, ابتكار">
+    <title>شركة رقم لحلول الأعمال</title>
+
+    <link rel="shortcut icon" href="./imgs/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        /* Inline critical CSS for improved loading speed */
+        .swiper {
+            width: 100%;
+            height: 100vh;
+            /* touch-action: none; */
+            overflow: hidden;
+        }
+
+        .swiper-vertical {
+            touch-action: pan-y;
+        }
+
+        .swiper-slide {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlay styling */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(36, 62, 91, 0.5) 0%,
+                    rgba(36, 62, 91, 0.032) 100%),
+                linear-gradient(180deg, rgba(255, 119, 51, 0.5) 0%, rgba(90, 180, 210, 0.8) 84.5%, #00c3ff9c 100%),
+                radial-gradient(94.34% 58.96% at 50% 50%, #00c3ff3e 0%, #00c3ff44 35%, #00c3ff60 100%);
+
+            z-index: 1;
+        }
+
+        /* Text content styling on top of overlay */
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: start;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #fff !important;
+        }
+
+        .swiper-pagination-bullet {
+            border: 2px solid #fff !important;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            opacity: 1;
+        }
+
+        .swiper-pagination-vertical.swiper-pagination-bullets,
+        .swiper-vertical>.swiper-pagination-bullets {
+            right: -30px;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" class="overflow-x-hidden">
+    <!-- <div class="loading w-100 h-100 position-fixed  align-items-center justify-content-center flex-column gap-5"
+        id="loading">
+        <img loading="lazy" src="./imgs/loading.gif" alt="">
+        <img loading="lazy" src="./imgs/progrress.gif" alt="">
+    </div> -->
+    <nav class="navbar container navbar-expand-lg fixed-top py-2 scrolled my-2" id="navbar">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler border-0 mx-sm-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-label="Toggle navigation">
+                    <i class="ri-menu-2-line fs-1 toggler-icon main-color"></i>
+                </button>
+                <a class="navbar-brand ms-sm-4" href="#home">
+                    <img loading="lazy" src="./imgs/logo2.svg" alt="RQM Logo" />
+                </a>
+
+            </div>
+
+            <div class="d-flex gap-sm-1 align-items-center ">
+                <!-- Language Switcher after Logo -->
+                <a class="text-decoration-none main-color d-none d-lg-none d-sm-block" href="#"
+                    aria-label="Switch to English">
+                    <i class="ri-global-line"></i>
+                    <span class="fw-bold">EN</span>
+                </a>
+                <!-- Logo -->
+                <a class="nav-link nav-contact main-color px-3 py-2 ms-sm-4 d-lg-none d-block" href="#contact-form"
+                    aria-label="Contact Us">تواصل
+                    معنا</a>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <!-- Main Navigation Links -->
+                <ul class="navbar-nav me-auto text-center mb-lg-0 d-flex align-items-center gy-5 gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active " href="#home" aria-label="Home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#our-vision" aria-label="Our Story">
+                            قصة رقم
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#see-future" aria-label="Our Services">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service" aria-label="Our Company">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-form" aria-label="Contact Us">الشركاء </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-form" aria-label="Contact Us">تواصل معنا </a>
+                    </li>
+                </ul>
+
+                <!-- Contact Link -->
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center d-lg-flex d-none">
+                    <li class="nav-item lang">
+                        <a class="text-decoration-none  mx-1 d-none d-lg-block main-color" href="#">
+                            <i class="ri-moon-line"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item lang">
+                        <a class="text-decoration-none  mx-1 d-none d-lg-block main-color" href="#"
+                            aria-label="Switch to English">
+                            <i class="ri-global-line"></i>
+                            <span class="fw-bold">EN</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-white " id="main" style="display: none;">
+
+
+        <!-- Swiper -->
+        <header id="home" class="bg-white container vh-100">
+            <div class="swiper mySwiper ">
+                <div class="swiper-wrapper ">
+                    <div class="swiper-slide position-relative rounded-4">
+                        <!-- <div class="w-100 h-100 position-absolute z-1 overlay"></div> -->
+                        <div class="w-100 h-100 position-absolute z-2">
+                            <div class=" h-100 container ">
+                                <div class="row  h-100 align-items-center justify-content-center align-content-center ">
+                                    <div class="col-lg-5 text-white order-1 text-start offset-lg-1">
+                                        <h1 class="mb-4">
+                                            الأمن السيبراني
+                                        </h1>
+                                        <p class="lh-base typing"></p>
+                                        <a class="call-us btn">اطلب الخدمة</a>
+                                        <a href="#section-2" aria-label="Scroll Down"
+                                            class="text-decoration-none down"><i
+                                                class="ri-arrow-down-line text-white"></i></a>
+                                    </div>
+                                    <div class="col-lg-5 text-center order-0 order-lg-1">
+                                        <img src="./imgs/slider/slider-icon.svg" class="m-auto"
+                                            style="width: 50px; height: 50px;" alt="">
+                                        <p class="text-white fw-bolder mt-3">InfoSec</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img loading="lazy" src="imgs/slider/1.png" class=" header-img " alt="">
+                        <!-- <img loading="lazy" src="imgs/slider/1.png  " class=" header-img d-block d-sm-none" alt=""> -->
+
+                    </div>
+                    <div class="swiper-slide position-relative rounded-4">
+                        <!-- <div class="w-100 h-100 position-absolute z-1 overlay"></div> -->
+                        <div class="w-100 h-100 position-absolute z-2">
+                            <div class=" h-100 container  ">
+                                <div class="row  h-100 align-items-center justify-content-center align-content-center">
+                                    <div class="col-lg-5 order-1 text-white text-start offset-lg-1">
+                                        <h1 class="mb-4">قيد</h1>
+                                        <p class="lh-base typing">بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا،
+                                            بدراسة
+                                            متأنية
+                                            وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل
+                                            إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.</p>
+                                        <button class="call-us btn">اطلب الخدمة</button>
+
+                                        <a href="#section-2" aria-label="Scroll Down"
+                                            class="text-decoration-none down"><i
+                                                class="ri-arrow-down-line text-white"></i></a>
+                                    </div>
+                                    <div class="col-lg-5 text-center order-0 order-lg-1">
+                                        <img src="./imgs/slider/slider-icon.svg" class="m-auto"
+                                            style="width: 50px; height: 50px;" alt="">
+                                        <p class="text-white fw-bolder mt-3">QYD</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img loading="lazy" src="imgs/slider/2.png" class=" header-img " alt="">
+                        <!-- <img loading="lazy" src="imgs/slider/header2sm.webp" class=" header-img d-block d-sm-none"
+                            alt=""> -->
+                    </div>
+                    <div class="swiper-slide position-relative rounded-4">
+                        <!-- <div class="w-100 h-100 position-absolute z-1 overlay"></div> -->
+                        <div class="w-100 h-100 position-absolute z-2">
+                            <div class=" h-100 container  ">
+                                <div class="row  h-100 align-items-center justify-content-center align-content-center">
+                                    <div class="col-lg-5 text-white order-1 text-start offset-lg-1">
+                                        <h1 class="mb-4">بناء المنصات</h1>
+                                        <p class="lh-base typing">بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا،
+                                            بدراسة
+                                            متأنية
+                                            وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل
+                                            إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.</p>
+                                        <button class="call-us btn">اطلب الخدمة</button>
+
+                                        <a href="#section-2" aria-label="Scroll Down"
+                                            class="text-decoration-none down"><i
+                                                class="ri-arrow-down-line text-white"></i></a>
+                                    </div>
+                                    <div class="col-lg-5 text-center order-0 order-lg-1">
+                                        <img src="./imgs/slider/slider-icon.svg" class="m-auto"
+                                            style="width: 50px; height: 50px;" alt="">
+                                        <p class="text-white fw-bolder mt-3">PaaS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img loading="lazy" src="imgs/slider/3.png" class=" header-img " alt="">
+                        <!-- <img loading="lazy" src="imgs/slider/header3sm.webp" class=" header-img d-block d-sm-none" -->
+                        <!-- alt=""> -->
+                    </div>
+
+                </div>
+                <div class="swiper-pagination container-fluid  mx-5"></div>
+            </div>
+        </header>
+
+
+        <main class="bg-white rounded-4 mt-5 pt-5">
+
+            <section id="section-2" class="section-2 my-5 py-5">
+
+                <div class="container">
+                    <div class="row gy-4">
+                        <div class="col-lg-7 d-flex align-items-center">
+                            <div>
+                                <h2>نرفع من كفاءة الأعمال <br> لتنمو وتستديم</h2>
+                                <p>نستثمر في فريق خبراء يستخدم منهجيات مرنة لتحليل احتياجاتك بشكل عميق، بهدف بناء حلول
+                                    رقمية
+                                    مبتكرة
+                                    قابلة للتحسين والنمو. نركز على تقديم حلول عالية الجودة ومتوافقة مع الأنظمة ومتطلبات
+                                    أمان
+                                    البيانات.</p>
+                                <a class="call-us btn text-white">اطلب الخدمة</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 offset-lg-1">
+                            <img src="./imgs/sec2.png" class="w-100 object-fit-contain h-100" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="our-values" class="overflow-hidden our-values">
+                <div class="container-fluid me-auto ps-0">
+                    <div class="text-center">
+                        <h2 class=" main-color    font-bold">قيمنا العالية</h2>
+                    </div>
+
+                    <div class="row my-5 gy-4 align-items-center">
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <img src=" ./imgs/Values.svg" loading="lazy" class="w-100  translate-x-[67px]" alt="">
+                        </div>
+                        <div class="col-lg-5 align-items-center">
+                            <div class="row gy-4 align-items-center justify-content-center">
+                                <div class=" item position-relative text-center col-lg-6">
+                                    <img src=" imgs/Polygon2.svg" loading="lazy" class="w-100 h-100" alt="">
+                                    <div class="position-absolute  top-50 start-50 translate-middle  ">
+                                        <span style="background-color: #DBDEE8;width: 36px; height: 36px;"
+                                            class="rounded-circle m-auto d-flex align-items-center justify-content-center ">1</span>
+                                        <h3 class="text-white text-2xl  mt-3 ">
+                                            النزاهة
+                                        </h3>
+                                        <p class="text-white ">
+                                            نغلف أعمالنا بالشفافية
+                                            <br class="d-none d-lg-block">
+                                            ونولي المعايير الأخلاقية الأولوية.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class=" item position-relative text-center col-lg-6 ">
+                                    <img src="imgs/Polygon1.svg" loading="lazy" class="w-100 h-100" alt="">
+
+                                    <div class="position-absolute  top-50 start-50 translate-middle">
+                                        <span style="background-color: #DBDEE8;width: 36px; height: 36px;"
+                                            class="rounded-circle m-auto d-flex align-items-center justify-content-center ">2</span>
+                                        <h3 class="main-color mt-3 ">
+                                            الالتزام
+                                        </h3>
+                                        <p class="main-color    ">
+                                            نقيس خطواتنا بدقة
+                                            <br class="d-none d-lg-block">
+                                            ونتعهد بمسؤوليتنا تجاه العميل.
+
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class=" item position-relative text-center col-lg-6">
+                                    <img src=" imgs/Polygon1.svg" loading="lazy" class="w-100 h-100" alt="">
+                                    <div class="position-absolute  top-50 start-50 translate-middle  ">
+                                        <span style="background-color: #DBDEE8;width: 36px; height: 36px;"
+                                            class="rounded-circle m-auto d-flex align-items-center justify-content-center ">3</span>
+                                        <h3 class="main-color text-2xl  mt-3 ">
+                                            الإتقان
+                                        </h3>
+
+                                        <p class="main-color ">
+                                             نهتم بتفاصيل
+                                            العمل <br class="d-none d-lg-block">
+                                            لنلبّي احتياجات العميل</p>
+                                    </div>
+                                </div>
+                                <div class=" item position-relative text-center col-lg-6">
+                                    <img src=" imgs/Polygon2.svg" loading="lazy" class="w-100 h-100" alt="">
+                                    <div class="position-absolute  top-50 start-50 translate-middle  ">
+                                        <span style="background-color: #DBDEE8;width: 36px; height: 36px;"
+                                            class="rounded-circle m-auto d-flex align-items-center justify-content-center ">4</span>
+                                        <h3 class="text-white text-2xl  mt-3 ">
+                                            الاستدامة
+                                        </h3>
+
+                                        <p class="text-white ">
+                                            نحافظ على استدامة
+                                            كفاءة <br class="d-none d-lg-block">
+                                            الأعمال ونموّها 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="why-rqm" class="overflow-hidden">
+                <div class="container   mx-auto">
+                    <div class="px-2 px-sm-0 d-flex justify-content-between">
+                        <h2 data-aos="fade-up" data-aos-duration="850" "
+                            class=" main-color fw-bold">لماذا رقم ؟</h2>
+                        <div class=" arrows mt-5">
+                            <span class="border swiper-button-next1  rounded-circle p-2"><i
+                                    class="ri-arrow-left-line"></i></span>
+                            <span class="border swiper-button-prev1 rounded-circle p-2 me-2 me-sm-1"><i
+                                    class="ri-arrow-right-line"></i></span>
+                        </div>
+                    </div>
+                    <div class=" swiper mySwiper2 mt-5 mb-4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide ">
+                                <div class="item h-100  p-3 rounded-4 border pb-5 rounded-3">
+                                    <img src="imgs/why1.png" height="220" loading="lazy"
+                                        class="w-100 rounded-4  object-fit-cover" alt="">
+                                    <h3 class="main-color  my-3">لياقة عالية</h3>
+                                    <p class="main-color ">نعتمد في أعمالنا على منهجيات رشيقة
+                                        تتميز
+                                        بالمرونة
+                                        مع التغيرات
+                                        والقدرة
+                                        على التحسين المستمر وفق
+                                        رغبات
+                                        العميل ومتطلبات السوق. </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="item h-100 p-3 rounded-4 border ">
+                                    <img loading="lazy" height="220" src="imgs/why2.png"
+                                        class="w-100 rounded-4 object-fit-cover" alt="">
+                                    <h3 class="main-color  my-3">ماراثون ابتكاري
+                                    </h3>
+                                    <p class="main-color ">
+                                        مستعدّون دائماً للعمل بخطوات متسارعة لتلبية احتياجات شركائنا العاجلة. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="item p-3 h-100 rounded-4 border ">
+                                    <img loading="lazy" height="220" src="imgs/why3.png"
+                                        class="w-100 rounded-4 object-fit-cover" alt="">
+                                    <h3 class="main-color  my-3"> خبرة عميقة</h3>
+                                    <p class="main-color ">
+                                        فريق من الكفاءات بسنين من الخبرات الرقمية في المجالات الحيوية الرائدة.
+                                         </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ">
+                                <div class="item p-3 h-100 rounded-4 border ">
+                                    <img loading="lazy" height="220" src="imgs/why4.png"
+                                        class="w-100 rounded-4 object-fit-cover" alt="">
+                                    <h3 class="main-color  my-3"> تقنيات متكاملة
+                                    </h3>
+                                    <p class="main-color ">
+                                        حلول شاملة لأحدث التقنيات تتكامل مع أهداف المنتجات والخدمات لمواكبة توجهات
+                                        السوق.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="scope" class="my-5 py-5 compliance-logos">
+                <div class="container text-center">
+                    <h2 class="main-color fw-bold my-4">نطاق الامتثال</h2>
+                    <div class="row gy-4  justify-content-center align-items-center">
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/1.png" alt="sdaia logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/2.png" alt="iso logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/3.png" alt="cst logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/4.png" alt="sama logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/5.png" alt="swift logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/6.png" alt="nlst logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/7.png" alt="pci logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/8.png" alt="nca logo">
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img src="./imgs/scope/9.png" alt="cma logo">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="partner" class="overflow-hidden partner  my-5 py-5">
+                <div class=" text-center py-5">
+                    <h2 class="main-color fw-bold">
+                        شركاء
+                        النجاح
+                    </h2>
+                </div>
+
+
+                <div class="item owl-carousel owl-carousel2 owl-theme ">
+                    <div class="item ">
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part1.svg" alt="">
+                    </div>
+                    <div class="item ">
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part2.svg" alt="">
+                    </div>
+                    <div class="item ">
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part3.svg" alt="">
+                    </div>
+                    <div class="item ">
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part4.svg" alt="">
+                    </div>
+                    <div class="item ">
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part1.svg" alt="">
+                    </div>
+                    <div class="item ">
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part3.svg" alt="">
+                    </div>
+                    <div class="item ">
+
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part2.svg" alt="">
+                    </div>
+                    <div class="item ">
+
+                        <img loading="lazy" class=" w-100 " height="50" src="imgs/part4.svg" alt="">
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <footer id="footer"
+        class=" py-4  footer text-white text-center position-fixed bottom-0 start-0 end-0 w-100 z-n1 -5">
+        <div class="container ">
+            <img loading="lazy" src="./imgs/logo.svg" alt="">
+            <h5 class="my-4">بوابتك للمستقبل الرقمي</h5>
+            <div>
+                <ul class="list-unstyled d-flex justify-content-center gap-4">
+                    <li><a href="" class="text-decoration-none text-white">الرئيسية</a></li>
+                    <li><a href="" class="text-decoration-none text-white">قصة رقم</a></li>
+                    <li><a href="" class="text-decoration-none text-white"> الخدمات</a></li>
+                    <li><a href="" class="text-decoration-none text-white"> من نحن</a></li>
+                    <li><a href="" class="text-decoration-none text-white">الشركاء</a></li>
+                    <li><a href="" class="text-decoration-none text-white"> تواصل معنا</a></li>
+                </ul>
+                <p class="fw-light">جميع الحقوق محفوظة لشركة رقم © 2024</p>
+
+                <ul class="list-unstyled d-flex justify-content-center gap-4">
+                    <li><a href="https://www.linkedin.com/company/byrqm-sa" target="_blank"
+                            class="text-decoration-none text-white"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="https://x.com/byrqm_sa" target="_blank" class="text-decoration-none text-white"><i
+                                class="ri-twitter-x-line"></i></a></li>
+                    <!-- <li><a href="" class="text-decoration-none text-white"><i class="ri-instagram-line"></i></a></li> -->
+                    <!-- <li><a href="" class="text-decoration-none text-white"><i class="ri-tiktok-fill"></i></a></li> -->
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript (deferred for performance) -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        var typed = new Typed('.typing', {
+            strings: [`بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا، بدراسة متأنية  وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.`],
+            typeSpeed: 27,
+            showCursor: false,
+        });
+
+
+    </script>
+    <script src="./js/main.js"></script>
+    <!-- Initialize Swiper -->
+    <script defer>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".mySwiper", {
+                direction: "vertical",
+                effect: "fade", // Enable fade effect
+                fadeEffect: {
+                    crossFade: false, // Smooth transition between slides
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 8000, // Delay between slides in milliseconds
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                },
+                lazy: true, // Lazily load images
+                observer: true, // Reinitialize when content changes
+                observeParents: true, // Observe container changes
+                mousewheel: false, // Disable scrolling with mouse wheel
+                touchStartPreventDefault: true, // Allow default touch behavior for scrolling
+
+                allowTouchMove: window.innerWidth >= 768, // Enable Swiper on larger screens only
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
