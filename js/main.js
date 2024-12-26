@@ -101,7 +101,7 @@ window.addEventListener("load", function () {
     const mainContent = document.getElementById("main");
     setTimeout(() => {
         loadingScreen.style.display = "none"; // Hide loading screen
-        document.body.style.overflow = "auto"; // Hide loading screen
+        document.body.style.overflowY = "auto"; // Hide loading screen
         AOS.init();
         AOS.refresh();
     }, 3000)

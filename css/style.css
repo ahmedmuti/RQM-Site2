@@ -16,6 +16,29 @@
     --padding: 2vh;
 }
 
+.loading {
+    background-color: var(--main-color) !important;
+    z-index: 9999999;
+    inset: 0;
+}
+
+iframe {
+    width: 100px !important;
+}
+
+.frame2 {
+    margin-top: -70px;
+}
+
+
+iframe {
+    width: 130px !important;
+}
+
+.frame2 {
+    margin-top: -86px;
+}
+
 .container {
     transition: all 0.2s;
 }
@@ -91,6 +114,7 @@
 body {
     font-family: "Almarai", sans-serif;
     /* font-size: var(--font-medium) */
+    overflow-y: hidden;
 }
 
 /* .text-center h1 {
