@@ -114,7 +114,6 @@ iframe {
 body {
     font-family: "Almarai", sans-serif;
     /* font-size: var(--font-medium) */
-    overflow-y: hidden;
 }
 
 /* .text-center h1 {
