@@ -55,33 +55,33 @@ document.addEventListener("DOMContentLoaded", function () {
 // add active link
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Get all nav links
-    const navLinks = document.querySelectorAll('.nav-link');
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Get all nav links
+//     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Loop through each link and add event listener
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            // Remove active class from all links
-            navLinks.forEach(navLink => {
-                navLink.classList.remove('active');
-            });
+//     // Loop through each link and add event listener
+//     navLinks.forEach(link => {
+//         link.addEventListener('click', function () {
+//             // Remove active class from all links
+//             navLinks.forEach(navLink => {
+//                 navLink.classList.remove('active');
+//             });
 
-            // Add active class to the clicked link
-            this.classList.add('active');
+//             // Add active class to the clicked link
+//             this.classList.add('active');
 
-            // Smooth scroll to the corresponding section
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+//             // Smooth scroll to the corresponding section
+//             const targetId = this.getAttribute('href');
+//             const targetSection = document.querySelector(targetId);
 
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
+//             if (targetSection) {
+//                 targetSection.scrollIntoView({
+//                     behavior: 'smooth'
+//                 });
+//             }
+//         });
+//     });
+// });
 
 // footer height
 
