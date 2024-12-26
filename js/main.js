@@ -104,6 +104,13 @@ window.addEventListener("load", function () {
         document.body.style.overflowY = "auto"; // Hide loading screen
         AOS.init();
         AOS.refresh();
+
+        var typed = new Typed('.typing', {
+            strings: [`بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا، بدراسة متأنية  وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.`],
+            typeSpeed: 27,
+            showCursor: false,
+        });
+
     }, 3000)
 
     mainContent.style.display = "block";  // Show main content
