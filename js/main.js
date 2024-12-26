@@ -164,7 +164,7 @@ const swiper = new Swiper('.mySwiper3', {
     loop: true, // Enables infinite loop
     slidesPerView: 'auto', // Adjust slides to fit automatically
     spaceBetween: 10, // Space between slides
-    speed: 5000, // Speed for continuous scroll
+    speed: 6000, // Speed for continuous scroll
     autoplay: {
         delay: 0, // No delay
         disableOnInteraction: false, // Keeps scrolling even after user interaction
