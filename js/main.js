@@ -255,7 +255,8 @@ if (window.location.pathname != '/contact.html' && window.location.pathname.spli
 function scrollUp() {
     window.scrollTo(0, 0)
 }
-showBtn: boolean = false;
+document.getElementById('up').style.display = 'none'
+
 
 window.addEventListener("scroll", function () {
     let scrollTop = document.documentElement.scrollTop;
