@@ -588,3 +588,45 @@ footer {
 .whatsapp-icon:hover {
     background: #1da851;
 }
+
+.idea-section {
+    margin-top: 50px;
+    padding: 50px 20px;
+}
+
+.idea-section h3 {
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 49.57px;
+
+    @media (max-width:600px) {
+        font-size: 39.57px;
+
+    }
+
+    font-weight: 700;
+    line-height: 100px;
+    /* 125.675% */
+}
+
+.idea-section a {
+    font-size: 2rem;
+    color: #838C97;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.idea-section i {
+    font-size: 57px;
+
+    @media (max-width:600px) {
+        font-size: 29.57px;
+
+    }
+}
+
+.idea-section a:hover {
+    color: #0056b3;
+}

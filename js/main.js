@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-if (window.location.pathname != '/who-we-are.html') {
+if (window.location.pathname == '/index.html') {
     window.addEventListener("load", function () {
         const loadingScreen = document.getElementById("loading");
         const mainContent = document.getElementById("main");
