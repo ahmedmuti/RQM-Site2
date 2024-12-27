@@ -373,6 +373,10 @@ body {
     }
 }
 
+.our-values img {
+    width: 80% !important;
+}
+
 /* why rqm */
 .arrows .border:hover {
     background-color: #d9d9d933;
@@ -571,7 +575,7 @@ footer {
 .whatsapp-icon {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 12px;
     background: #25d366;
     color: #fff;
     font-size: 1.5rem;

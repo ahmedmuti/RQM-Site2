@@ -98,7 +98,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 if (window.location.pathname == '/index.html') {
+    let typedStarted = false;
+    window.addEventListener("scroll", function () {
+        const targetSection = document.getElementById("section-2");
+        const sectionPosition = targetSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        // Check if section is in the viewport
+        if (sectionPosition < windowHeight && !typedStarted) {
+
+            var typed = new Typed('#typing', {
+                strings: [`نستثمر في فريق خبراء يستخدم منهجيات مرنة لتحليل احتياجاتك بشكل عميق، بهدف بناء حلول رقمية مبتكرة قابلة للتحسين والنمو. نركز على تقديم حلول عالية الجودة ومتوافقة مع الأنظمة ومتطلبات أمان البيانات.`],
+                typeSpeed: 35,
+                showCursor: false,
+                onComplete: (self) => { },
+            });
+            typedStarted = true;
+        }
+    });
+
     window.addEventListener("load", function () {
         const loadingScreen = document.getElementById("loading");
         const mainContent = document.getElementById("main");
@@ -112,12 +131,12 @@ if (window.location.pathname == '/index.html') {
 
         }, 3000)
 
-        var typed = new Typed('.typing', {
-            strings: [`بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا، بدراسة متأنية  وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.`],
-            typeSpeed: 27,
-            showCursor: false,
-            startDelay: 3000
-        });
+        // var typed = new Typed('#typing', {
+        //     strings: [`منهجيات مرنة  لتحليل احتياجاتك بشكل عميق، بهدف بناء حلول   رقمية  مبتكرة  قابلة للتحسين والنمو. نركز على تقديم حلول عالية الجودة ومتوافقة مع الأنظمة ومتطلبات    أمان   البيانات.`],
+        //     typeSpeed: 27,
+        //     showCursor: false,
+        //     startDelay: 3000
+        // });
 
         mainContent.style.display = "block";  // Show main content
     });
