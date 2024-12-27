@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-if (window.location.pathname != '/contact.html' && window.location.pathname.split('/')[1] != '/services.html' && window.location.pathname.split('/')[1] != '/who-we-are.html') {
+if (window.location.pathname != '/contact.html' && window.location.pathname.split('/')[2] != 'services.html' && window.location.pathname.split('/')[2] != 'who-we-are.html') {
     let typedStarted = false;
     window.addEventListener("scroll", function () {
         const targetSection = document.getElementById("section-2");
