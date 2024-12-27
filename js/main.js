@@ -255,15 +255,15 @@ if (window.location.pathname != '/contact.html' && window.location.pathname.spli
 function scrollUp() {
     window.scrollTo(0, 0)
 }
-document.getElementById('up').style.display = 'none'
+document.getElementById('up').style.transform = 'translateX(100px)'
 
 
 window.addEventListener("scroll", function () {
     let scrollTop = document.documentElement.scrollTop;
     if (scrollTop > 500) {
-        document.getElementById('up').style.display = 'grid'
+        document.getElementById('up').style.transform = 'translateX(10px)'
     } else {
-        document.getElementById('up').style.display = 'none'
+        document.getElementById('up').style.transform = 'translateX(100px)'
 
     }
 });
