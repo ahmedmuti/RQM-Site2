@@ -129,7 +129,7 @@ if (window.location.pathname != '/contact.html' && window.location.pathname.spli
 
 
 
-        }, 3000)
+        }, 3500)
 
         // var typed = new Typed('#typing', {
         //     strings: [`منهجيات مرنة  لتحليل احتياجاتك بشكل عميق، بهدف بناء حلول   رقمية  مبتكرة  قابلة للتحسين والنمو. نركز على تقديم حلول عالية الجودة ومتوافقة مع الأنظمة ومتطلبات    أمان   البيانات.`],

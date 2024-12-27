@@ -432,7 +432,12 @@ body {
     margin: 10px;
     filter: grayscale(100%);
     transition: 0.2s;
+
     /* Optional: For a grayscale effect */
+    @media (max-width:600px) {
+        max-width: 60%;
+
+    }
 }
 
 .compliance-logos img:hover {
@@ -576,6 +581,7 @@ footer {
     position: fixed;
     bottom: 20px;
     left: 12px;
+    z-index: 9999;
     background: #25d366;
     color: #fff;
     font-size: 1.5rem;
