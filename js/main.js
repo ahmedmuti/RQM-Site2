@@ -110,7 +110,7 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
 
             var typed = new Typed('#typing', {
                 strings: [`نستثمر في فريق خبراء يستخدم منهجيات مرنة لتحليل احتياجاتك بشكل عميق، بهدف بناء حلول رقمية مبتكرة قابلة للتحسين والنمو. نركز على تقديم حلول عالية الجودة ومتوافقة مع الأنظمة ومتطلبات أمان البيانات.`],
-                typeSpeed: 35,
+                typeSpeed: 15,
                 showCursor: false,
                 onComplete: (self) => { },
             });
