@@ -250,3 +250,20 @@ if (window.location.pathname != '/contact.html' && window.location.pathname.spli
 }
 
 
+
+
+function scrollUp() {
+    window.scrollTo(0, 0)
+}
+showBtn: boolean = false;
+
+window.addEventListener("scroll", function () {
+    let scrollTop = document.documentElement.scrollTop;
+    if (scrollTop > 500) {
+        document.getElementById('up').style.display = 'grid'
+    } else {
+        document.getElementById('up').style.display = 'none'
+
+    }
+});
+
