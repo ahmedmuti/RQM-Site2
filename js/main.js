@@ -96,129 +96,138 @@ document.addEventListener("DOMContentLoaded", function () {
     targetSection.style.marginBottom = `${footerHeight + 60}px`;
 });
 
-window.addEventListener("load", function () {
-    const loadingScreen = document.getElementById("loading");
-    const mainContent = document.getElementById("main");
-    setTimeout(() => {
-        loadingScreen.style.display = "none"; // Hide loading screen
-        document.body.style.overflowY = "auto"; // Hide loading screen
-        AOS.init();
-        AOS.refresh();
+
+
+if (window.location.pathname != '/who-we-are.html') {
+    window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading");
+        const mainContent = document.getElementById("main");
+        setTimeout(() => {
+            loadingScreen.style.display = "none"; // Hide loading screen
+            document.body.style.overflowY = "auto"; // Hide loading screen
+            AOS.init();
+            AOS.refresh();
 
 
 
-    }, 3000)
+        }, 3000)
 
-    var typed = new Typed('.typing', {
-        strings: [`بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا، بدراسة متأنية  وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.`],
-        typeSpeed: 27,
-        showCursor: false,
-        startDelay: 3000
+        var typed = new Typed('.typing', {
+            strings: [`بدأنا رحلتنا من الجذور، مع أول لَبنة في بنية مشروعنا، بدراسة متأنية  وتخطيط دقيق، فابتكرنا حلولًا رقمية تنطلق من لغة الآلة وتصل إلى أبعاد التقنية الحديثة، لتتجسد الفكرة المبتكرة في منتج مستدام.`],
+            typeSpeed: 27,
+            showCursor: false,
+            startDelay: 3000
+        });
+
+        mainContent.style.display = "block";  // Show main content
+    });
+    AOS.init();
+    AOS.refresh();
+
+
+    var swiper1 = new Swiper(".mySwiper2", {
+        // slidesPerView: "auto",
+        spaceBetween: 30,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next1",
+            prevEl: ".swiper-button-prev1",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+            },
+            1400: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
     });
 
-    mainContent.style.display = "block";  // Show main content
-});
+    const swiper = new Swiper('.mySwiper3', {
+        loop: true, // Enables infinite loop
+        slidesPerView: 'auto', // Adjust slides to fit automatically
+        spaceBetween: 10, // Space between slides
+        speed: 6000, // Speed for continuous scroll
+        autoplay: {
+            delay: 0, // No delay
+            disableOnInteraction: false, // Keeps scrolling even after user interaction
+        },
+        freeMode: true, // Allows continuous scrolling
+        freeModeMomentum: false,
+        // Ensures constant scroll without slowing down
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+            },
+            1400: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    $(".owl-carousel2").owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: false,
+        rtl: true,
+        slideTransition: "linear",
+        smartSpeed: 1700,
+
+        autoplay: true,
+        autoplayTimeout: 900,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 3,
+            },
+            600: {
+                items: 3,
+            },
+            800: {
+                items: 4,
+            },
+            1000: {
+                items: 8,
+            },
+        },
+    });
+} else {
+    window.addEventListener("load", function () {
+        const mainContent = document.getElementById("main");
+        document.body.style.overflowY = "auto";
+        mainContent.style.display = "block";  // Show main content
+    });
+}
 
 
-AOS.init();
-AOS.refresh();
-
-
-
-var swiper1 = new Swiper(".mySwiper2", {
-    // slidesPerView: "auto",
-    spaceBetween: 30,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next1",
-        prevEl: ".swiper-button-prev1",
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 24,
-        },
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 25,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-        },
-        1400: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-    },
-});
-
-const swiper = new Swiper('.mySwiper3', {
-    loop: true, // Enables infinite loop
-    slidesPerView: 'auto', // Adjust slides to fit automatically
-    spaceBetween: 10, // Space between slides
-    speed: 6000, // Speed for continuous scroll
-    autoplay: {
-        delay: 0, // No delay
-        disableOnInteraction: false, // Keeps scrolling even after user interaction
-    },
-    freeMode: true, // Allows continuous scrolling
-    freeModeMomentum: false,
-    // Ensures constant scroll without slowing down
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 24,
-        },
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 25,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-        },
-        1400: {
-            slidesPerView: 5,
-            spaceBetween: 30,
-        },
-    },
-});
-
-$(".owl-carousel2").owlCarousel({
-    loop: true,
-    margin: 20,
-    dots: false,
-    rtl: true,
-    slideTransition: "linear",
-    smartSpeed: 1700,
-
-    autoplay: true,
-    autoplayTimeout: 900,
-    autoplayHoverPause: true,
-    responsive: {
-        0: {
-            items: 3,
-        },
-        600: {
-            items: 3,
-        },
-        800: {
-            items: 4,
-        },
-        1000: {
-            items: 8,
-        },
-    },
-});

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="مستقبل رقمي يتحقق بعقول مبتكرة و خبره و اسعة نسعى الى تقديم حلول و منتجات رقمية تساعدك على تحسين جودة اعمالك و تساهم في تحقيق اهدافك و تطلعاتك للعصر الرقمي">
+    <meta name="keywords"
+        content="تطوير التطبيقات, هواتف ذكية, انترنت الأشياء, الأمن السبرانى, تحليل البيانات, شركة تقنيةو الحوسبة الحسابية, ابتكار">
+    <title>شركة رقم لحلول الأعمال</title>
+
+    <link rel="shortcut icon" href="./imgs/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <style>
+        .highlight {
+            background: linear-gradient(266deg, #62C4AA 2.12%, #4C89D5 99.49%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .service-text {
+            color: #3D5579;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 160%;
+            letter-spacing: -0.198px;
+        }
+
+        .image-container {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.16);
+            color: #fff;
+            padding: 15px;
+            font-size: 1rem;
+            width: 70%;
+
+            @media (max-width:600px) {
+                width: auto;
+            }
+        }
+
+
+        .service-content .service-item {
+            border-radius: 12px;
+            background: #F7F7F9;
+            width: fit-content;
+            color: #152A54;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.16px;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        .service-content .service-item::after {
+            content: "";
+            position: absolute;
+            background-color: #62C4AA;
+            width: 2px;
+            height: 80%;
+            top: 5px;
+            right: 12px;
+        }
+
+        .service-item {
+            /* border: 1px solid #ddd; */
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #ABABAB;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 26px;
+        }
+
+
+        .img-section .service-item:hover,
+        .service-item.active {
+            /* background: #e9f7ff; */
+            border-color: #007bff;
+            color: #08090A;
+            text-align: right;
+            font-family: Almarai;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            /* 162.5% */
+        }
+
+        .tags span {
+            border-radius: 12px;
+            border: 1px solid #08090A;
+            background: #FAFAFB;
+            color: #152A54;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.16px;
+            padding: 8px 14px;
+
+        }
+
+        #service2 h3 {
+            color: #6F7988;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 160%;
+            letter-spacing: -0.198px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar container navbar-expand-lg fixed-top py-2 scrolled my-2" id="navbar">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler border-0 mx-sm-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-label="Toggle navigation">
+                    <i class="ri-menu-2-line fs-1 toggler-icon main-color"></i>
+                </button>
+                <a class="navbar-brand ms-sm-4" href="./index.html">
+                    <img loading="lazy" src="./imgs/logo2.svg" alt="RQM Logo" />
+                </a>
+
+            </div>
+
+            <div class="d-flex gap-sm-1 align-items-center ">
+                <!-- Language Switcher after Logo -->
+                <a class="text-decoration-none main-color d-none d-lg-none d-sm-block" href="#"
+                    aria-label="Switch to English">
+                    <i class="ri-global-line"></i>
+                    <span class="fw-bold">EN</span>
+                </a>
+                <!-- Logo -->
+                <a class="nav-link nav-contact main-color px-3 py-2 ms-sm-4 d-lg-none d-block" href="#contact-form"
+                    aria-label="Contact Us">تواصل
+                    معنا</a>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <!-- Main Navigation Links -->
+                <ul class="navbar-nav me-auto text-center mb-lg-0 d-flex align-items-center gy-5 gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link  " href="./index.html" aria-label="Home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#our-vision" aria-label="Our Story">
+                            قصة رقم
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./services.html" aria-label="Our Services">الخدمات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./who-we-are.html" aria-label="Our Company">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-form" aria-label="Contact Us">الشركاء </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./contact.html" aria-label="Contact Us">تواصل معنا </a>
+                    </li>
+                </ul>
+
+                <!-- Contact Link -->
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex align-items-center d-lg-flex d-none">
+                    <li class="nav-item lang">
+                        <a class="text-decoration-none  mx-1 d-none d-lg-block main-color" href="#">
+                            <i class="ri-moon-line"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item lang">
+                        <a class="text-decoration-none  mx-1 d-none d-lg-block main-color" href="#"
+                            aria-label="Switch to English">
+                            <i class="ri-global-line"></i>
+                            <span class="fw-bold">EN</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white overflow-hidden py-5 mt-5" id="main">
+
+        <div class="container hero-section position-relative">
+            <div class="row">
+                <!-- Text Section -->
+                <div class="col-lg-5 ">
+                    <h1 class="my-4 fw-bold">الخدمات <span class="highlight">المقدمة</span> </h1>
+                    <p class="service-text">
+                        نبني مع عملائنا الحلول الرقمية المتكاملة من تطوير برمجيات مخصصة، وتطبيقات الأعمال، وأدوات
+                        التكامل، وبناء ودراسة واجهات وتجربة المستخدم،
+                        وتوفير البنية التقنية المتكاملة.
+                    </p>
+                </div>
+            </div>
+            <div class="row gy-4">
+
+                <!-- Image Section -->
+                <div class="col-md-4 img-section position-sticky top-0 end-0 mt-5 pt-5">
+                    <div class="active service-item align-items-center d-flex justify-content-start gap-3">
+                        001 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6"
+                            fill="none">
+                            <g clip-path="url(#clip0_3214_1233)">
+                                <path
+                                    d="M0.162488 3.55576C0.113153 3.52656 0.0722742 3.48502 0.0438776 3.43522C0.015481 3.38542 0.000547409 3.32908 0.000547409 3.27176C0.000547409 3.21443 0.015481 3.15809 0.0438776 3.10829C0.0722742 3.05849 0.113153 3.01695 0.162488 2.98776C1.80483 2.03015 3.55775 1.27626 5.38249 0.742756C5.65249 0.688756 5.92349 0.985756 5.76149 1.22976C5.37989 1.76909 4.91432 2.24378 4.38249 2.63576C8.16849 2.52776 12.0905 2.01376 15.8225 2.90576C16.0925 2.95976 16.0385 3.41976 15.7685 3.39276C11.9005 2.90576 8.06049 3.28476 4.19249 3.33576C4.59849 3.79576 5.00349 4.25576 5.40949 4.68776C5.45638 4.7348 5.48813 4.7948 5.50066 4.86003C5.51318 4.92526 5.50592 4.99274 5.47979 5.05381C5.45367 5.11488 5.40987 5.16674 5.35404 5.20273C5.29821 5.23871 5.2329 5.25718 5.16649 5.25576C3.40032 5.03493 1.69768 4.45649 0.162488 3.55576ZM3.38149 3.25576C3.32202 3.2148 3.27713 3.15598 3.25333 3.08781C3.22953 3.01964 3.22805 2.94566 3.24911 2.87659C3.27016 2.80753 3.31266 2.74695 3.37044 2.70365C3.42822 2.66035 3.49829 2.63657 3.57049 2.63576H3.62449C3.94949 2.31076 4.27349 2.01376 4.59849 1.66176C3.3682 2.10022 2.17449 2.63522 1.02849 3.26176C2.06571 3.80869 3.17754 4.20053 4.32849 4.42476C4.05849 4.12476 3.78749 3.80276 3.49049 3.50476C3.44475 3.48464 3.4082 3.44814 3.38802 3.40242C3.36785 3.35671 3.36552 3.3051 3.38149 3.25776V3.25576Z"
+                                    fill="url(#paint0_linear_3214_1233)" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_3214_1233" x1="16.0104" y1="0.737497" x2="16.0104"
+                                    y2="5.2572" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#62C4AA" />
+                                    <stop offset="1" stop-color="#4C89D5" />
+                                </linearGradient>
+                                <clipPath id="clip0_3214_1233">
+                                    <rect width="16" height="4.525" fill="white" transform="translate(0 0.736328)" />
+                                </clipPath>
+                            </defs>
+                        </svg> بناء الحلول الرقمية المتكاملة
+                    </div>
+                    <div class="service-item align-items-center d-flex justify-content-start gap-3">
+                        002 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6"
+                            fill="none">
+                            <g clip-path="url(#clip0_3214_1233)">
+                                <path
+                                    d="M0.162488 3.55576C0.113153 3.52656 0.0722742 3.48502 0.0438776 3.43522C0.015481 3.38542 0.000547409 3.32908 0.000547409 3.27176C0.000547409 3.21443 0.015481 3.15809 0.0438776 3.10829C0.0722742 3.05849 0.113153 3.01695 0.162488 2.98776C1.80483 2.03015 3.55775 1.27626 5.38249 0.742756C5.65249 0.688756 5.92349 0.985756 5.76149 1.22976C5.37989 1.76909 4.91432 2.24378 4.38249 2.63576C8.16849 2.52776 12.0905 2.01376 15.8225 2.90576C16.0925 2.95976 16.0385 3.41976 15.7685 3.39276C11.9005 2.90576 8.06049 3.28476 4.19249 3.33576C4.59849 3.79576 5.00349 4.25576 5.40949 4.68776C5.45638 4.7348 5.48813 4.7948 5.50066 4.86003C5.51318 4.92526 5.50592 4.99274 5.47979 5.05381C5.45367 5.11488 5.40987 5.16674 5.35404 5.20273C5.29821 5.23871 5.2329 5.25718 5.16649 5.25576C3.40032 5.03493 1.69768 4.45649 0.162488 3.55576ZM3.38149 3.25576C3.32202 3.2148 3.27713 3.15598 3.25333 3.08781C3.22953 3.01964 3.22805 2.94566 3.24911 2.87659C3.27016 2.80753 3.31266 2.74695 3.37044 2.70365C3.42822 2.66035 3.49829 2.63657 3.57049 2.63576H3.62449C3.94949 2.31076 4.27349 2.01376 4.59849 1.66176C3.3682 2.10022 2.17449 2.63522 1.02849 3.26176C2.06571 3.80869 3.17754 4.20053 4.32849 4.42476C4.05849 4.12476 3.78749 3.80276 3.49049 3.50476C3.44475 3.48464 3.4082 3.44814 3.38802 3.40242C3.36785 3.35671 3.36552 3.3051 3.38149 3.25776V3.25576Z"
+                                    fill="url(#paint0_linear_3214_1233)" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_3214_1233" x1="16.0104" y1="0.737497" x2="16.0104"
+                                    y2="5.2572" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#62C4AA" />
+                                    <stop offset="1" stop-color="#4C89D5" />
+                                </linearGradient>
+                                <clipPath id="clip0_3214_1233">
+                                    <rect width="16" height="4.525" fill="white" transform="translate(0 0.736328)" />
+                                </clipPath>
+                            </defs>
+                        </svg> الأمن السيبراني
+                    </div>
+                    <div class="service-item align-items-center d-flex justify-content-start gap-3">
+                        003 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6"
+                            fill="none">
+                            <g clip-path="url(#clip0_3214_1233)">
+                                <path
+                                    d="M0.162488 3.55576C0.113153 3.52656 0.0722742 3.48502 0.0438776 3.43522C0.015481 3.38542 0.000547409 3.32908 0.000547409 3.27176C0.000547409 3.21443 0.015481 3.15809 0.0438776 3.10829C0.0722742 3.05849 0.113153 3.01695 0.162488 2.98776C1.80483 2.03015 3.55775 1.27626 5.38249 0.742756C5.65249 0.688756 5.92349 0.985756 5.76149 1.22976C5.37989 1.76909 4.91432 2.24378 4.38249 2.63576C8.16849 2.52776 12.0905 2.01376 15.8225 2.90576C16.0925 2.95976 16.0385 3.41976 15.7685 3.39276C11.9005 2.90576 8.06049 3.28476 4.19249 3.33576C4.59849 3.79576 5.00349 4.25576 5.40949 4.68776C5.45638 4.7348 5.48813 4.7948 5.50066 4.86003C5.51318 4.92526 5.50592 4.99274 5.47979 5.05381C5.45367 5.11488 5.40987 5.16674 5.35404 5.20273C5.29821 5.23871 5.2329 5.25718 5.16649 5.25576C3.40032 5.03493 1.69768 4.45649 0.162488 3.55576ZM3.38149 3.25576C3.32202 3.2148 3.27713 3.15598 3.25333 3.08781C3.22953 3.01964 3.22805 2.94566 3.24911 2.87659C3.27016 2.80753 3.31266 2.74695 3.37044 2.70365C3.42822 2.66035 3.49829 2.63657 3.57049 2.63576H3.62449C3.94949 2.31076 4.27349 2.01376 4.59849 1.66176C3.3682 2.10022 2.17449 2.63522 1.02849 3.26176C2.06571 3.80869 3.17754 4.20053 4.32849 4.42476C4.05849 4.12476 3.78749 3.80276 3.49049 3.50476C3.44475 3.48464 3.4082 3.44814 3.38802 3.40242C3.36785 3.35671 3.36552 3.3051 3.38149 3.25776V3.25576Z"
+                                    fill="url(#paint0_linear_3214_1233)" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_3214_1233" x1="16.0104" y1="0.737497" x2="16.0104"
+                                    y2="5.2572" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#62C4AA" />
+                                    <stop offset="1" stop-color="#4C89D5" />
+                                </linearGradient>
+                                <clipPath id="clip0_3214_1233">
+                                    <rect width="16" height="4.525" fill="white" transform="translate(0 0.736328)" />
+                                </clipPath>
+                            </defs>
+                        </svg> استشارات التحول الرقمي
+                    </div>
+                </div>
+
+                <div class="col-md-8 ">
+                    <div id="service1" class="service-content">
+                        <div class="image-container position-relative">
+                            <img src="./imgs/services/1.svg" alt="Digital Services">
+                            <div class="overlay position-absolute m-3 ">
+                                <h4>بناء الحلول الرقمية المتكاملة</h4>
+                                نجعل أعمالك أكثر كفاءة، حلولنا المخصصة تزيد من إنتاجيتك، وتحسن كفاءاتك، وتوفر لك الوقت
+                                والمال.
+                            </div>
+                        </div>
+                        <div class=" my-4">
+                            <div class="service-item">
+                                بناء منصات الويب وتطبيقات الهواتف الذكية
+                            </div>
+                            <div class="service-item">
+                                بناء المنتجات الداخلية للأعمال
+                            </div>
+                            <div class="service-item">
+                                تطوير خدمات التكامل الرقمي وربطها مع الأعمال
+                            </div>
+                            <div class="service-item">
+                                تحليل متطلبات الأعمال وهندسة الإجراءات
+                            </div>
+                            <div class="service-item">
+                                خدمات واجهات وتجربة المستخدم
+                            </div>
+                            <div class="service-item">
+                                خدمات الحوسبة السحابية التشغيلية DevSecOps
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service2" class="service-content my-5 py-5">
+                        <div class="image-container position-relative">
+                            <img src="./imgs/services/2.svg" alt="Digital Services">
+                            <div class="overlay position-absolute m-3 ">
+                                <h4>الامن السيبراني</h4>
+                                <p>نوفر لك الحماية الشاملة التي تحتاجها أعمالك. خبراتنا في الأمن السيبراني تحافظ على
+                                    أمان بياناتك وتدفع أعمالك إلى الأمام.</p>
+                            </div>
+                        </div>
+                        <div class=" my-4">
+                            <div class="d-flex gap-lg-5 gap-2 my-4 tags flex-wrap">
+                                <span>الاستشارات السيبرانية</span>
+                                <span>الحوكمة وإدارة المخاطر</span>
+                                <span>التوعية والتدريب بالأمن السيبراني :</span>
+                            </div>
+                            <h3 class="mb-5">نجعل أعمالك أكثر أمانًا
+                            </h3>
+                            <div class="service-item">
+                                حماية بياناتك: نضمن سرية وسلامة بياناتك.
+                            </div>
+                            <div class="service-item">
+                                تعزيز الثقة: نبنيك صورة شركة موثوقة وآمنة.
+                            </div>
+                            <div class="service-item">
+                                الاستمرارية التشغيلية: نضمن استمرارية أعمالك دون انقطاع.
+                            </div>
+                            <div class="service-item">
+                                النمو الآمن: ندعم نموك الرقمي بأمان تام.
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="service3" class="service-content">
+                        <div class="image-container position-relative">
+                            <img src="./imgs/services/3.svg" alt="Digital Services">
+                            <div class="overlay position-absolute m-3 ">
+                                <h4>استشارات التحول الرقمي </h4>
+                                نجعل أعمالك أكثر كفاءة، حلولنا المخصصة تزيد من إنتاجيتك، وتحسن كفاءاتك، وتوفر لك الوقت
+                                والمال.
+                            </div>
+                        </div>
+                        <div class=" my-4">
+                            <div class="service-item">
+                                بناء منصات الويب وتطبيقات الهواتف الذكية
+                            </div>
+                            <div class="service-item">
+                                بناء المنتجات الداخلية للأعمال
+                            </div>
+                            <div class="service-item">
+                                تطوير خدمات التكامل الرقمي وربطها مع الأعمال
+                            </div>
+                            <div class="service-item">
+                                تحليل متطلبات الأعمال وهندسة الإجراءات
+                            </div>
+                            <div class="service-item">
+                                خدمات واجهات وتجربة المستخدم
+                            </div>
+                            <div class="service-item">
+                                خدمات الحوسبة السحابية التشغيلية DevSecOps
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- WhatsApp Icon -->
+        <a href="https://api.whatsapp.com/send?phone=966554404688" target="_blank"
+            class="whatsapp-icon text-decoration-none">
+            <i class="ri-whatsapp-fill"></i>
+        </a>
+    </div>
+
+    <footer id="footer" class="py-4  footer text-white text-center position-fixed bottom-0 start-0 end-0 w-100 z-n1 ">
+        <div class="container ">
+            <img loading="lazy" src="./imgs/logo.svg" alt="">
+            <h5 class="my-4">بوابتك للمستقبل الرقمي</h5>
+            <div>
+                <ul class="list-unstyled d-flex justify-content-center gap-4">
+                    <li><a href="" class="text-decoration-none text-white">الرئيسية</a></li>
+                    <li><a href="" class="text-decoration-none text-white">قصة رقم</a></li>
+                    <li><a href="" class="text-decoration-none text-white"> الخدمات</a></li>
+                    <li><a href="" class="text-decoration-none text-white"> من نحن</a></li>
+                    <li><a href="" class="text-decoration-none text-white">الشركاء</a></li>
+                    <li><a href="" class="text-decoration-none text-white"> تواصل معنا</a></li>
+                </ul>
+                <p class="fw-light">جميع الحقوق محفوظة لشركة رقم © 2024</p>
+
+                <ul class="list-unstyled d-flex justify-content-center gap-4 mb-0">
+                    <li><a href="https://www.linkedin.com/company/byrqm-sa" target="_blank"
+                            class="text-decoration-none text-white"><i class="ri-linkedin-fill"></i></a></li>
+                    <li><a href="https://x.com/byrqm_sa" target="_blank" class="text-decoration-none text-white"><i
+                                class="ri-twitter-x-line"></i></a></li>
+                    <!-- <li><a href="" class="text-decoration-none text-white"><i class="ri-instagram-line"></i></a></li> -->
+                    <!-- <li><a href="" class="text-decoration-none text-white"><i class="ri-tiktok-fill"></i></a></li> -->
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
