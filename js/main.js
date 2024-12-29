@@ -126,7 +126,9 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
             document.body.style.overflowY = "auto"; // Hide loading screen
             AOS.init();
             AOS.refresh();
-
+            particlesJS.load('particles-js', 'assets/particles.json', function () {
+                console.log('callback - particles.js config loaded');
+            });
 
 
         }, 3500)
@@ -246,6 +248,7 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
         const mainContent = document.getElementById("main");
         document.body.style.overflowY = "auto";
         mainContent.style.display = "block";  // Show main content
+
     });
 }
 
@@ -267,4 +270,5 @@ window.addEventListener("scroll", function () {
 
     }
 });
+
 

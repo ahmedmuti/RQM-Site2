@@ -293,7 +293,9 @@ header .swiper-slide {
     border: none;
     color: #fff;
     padding: 8px 17px;
+    z-index: 99999999;
 }
+
 
 /* section 2 */
 /* services */

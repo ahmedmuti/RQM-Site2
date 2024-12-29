@@ -125,10 +125,21 @@
         .nm {
             margin-top: -28px !important
         }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            /* Send it to the back */
+        }
     </style>
 </head>
 
 <body class="overflow-x-hidden">
+
     <div id="loading" class="loading flex-column align-items-center justify-content-center w-100 h-100 position-fixed ">
 
         <div>
@@ -218,8 +229,11 @@
         <header id="home" class="bg-white container ">
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper ">
+                    <div id="particles-js" class="position-absolute"></div>
+
                     <div class="swiper-slide position-relative rounded-4">
                         <!-- <div class="w-100 h-100 position-absolute z-1 overlay"></div> -->
+
                         <div class="w-100 h-100 position-absolute z-2">
                             <div class=" h-100  px-2">
                                 <div class="row  h-100 align-items-center justify-content-center align-content-center ">
@@ -232,7 +246,8 @@
                                             التهديدات، واختبارات الأمان،
                                             والاستشارات والتدريب، لحماية منظومة العمل من المخاطر وضمان استدامة الأعمال.
                                         </p>
-                                        <a class="call-us btn" href="./contact.html">اطلب الخدمة</a>
+                                        <a class="call-us btn position-relative " href="./contact.html">اطلب
+                                            الخدمة</a>
                                         <a href="#section-2" aria-label="Scroll Down"
                                             class="text-decoration-none down"><i
                                                 class="ri-arrow-down-line text-white"></i></a>
@@ -821,6 +836,7 @@
 
 
     </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="./js/main.js"></script>
     <!-- Initialize Swiper -->
     <script defer>
@@ -852,6 +868,7 @@
 
         });
     </script>
+
 </body>
 
 </html>
