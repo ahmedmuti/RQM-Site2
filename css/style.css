@@ -262,6 +262,10 @@ header .swiper-slide {
     /* object-fit: cover !important; */
     /* object-position: center center; */
 
+    @media (max-width:600px) {
+        height: 110% !important;
+
+    }
 
 }
 
