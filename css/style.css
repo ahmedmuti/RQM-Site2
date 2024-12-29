@@ -821,3 +821,11 @@ span.up:hover:before {
         line-height: 168%;
     }
 }
+
+
+.modal-body::-webkit-scrollbar {
+    width: 0px !important;
+    /* Set scrollbar width */
+    height: 8px;
+    /* Set scrollbar height */
+}
