@@ -282,7 +282,7 @@ window.addEventListener("scroll", function () {
 
 // Function to check if the loading screen should be shown
 function showLoadingScreen() {
-    const HOUR_IN_MS = 3600000; // 1 hour in milliseconds
+    const HOUR_IN_MS = 360000; // 1 hour in milliseconds
     const lastVisit = localStorage.getItem('lastVisit'); // Get the last visit timestamp
 
     // Check if the user has visited before or if it's been more than 1 hour
