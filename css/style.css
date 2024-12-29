@@ -787,3 +787,20 @@ span.up:hover:before {
         }
     }
 }
+
+.policy {
+    h2 {
+        color: #171717;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    p,
+    h3 {
+        color: #6B6B6B;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 168%;
+    }
+}
