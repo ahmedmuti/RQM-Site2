@@ -1,6 +1,7 @@
 const navbar = document.querySelector('.navbar');
 const main = document.querySelector('#main');
-
+const loadingScreen = document.getElementById("loading");
+const mainContent = document.getElementById("main");
 // Get the height of the navbar
 const navbarHeight = navbar.offsetHeight + 7;
 
@@ -119,26 +120,22 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
     });
 
     window.addEventListener("load", function () {
-        const loadingScreen = document.getElementById("loading");
-        const mainContent = document.getElementById("main");
-        setTimeout(() => {
-            loadingScreen.style.display = "none"; // Hide loading screen
-            document.body.style.overflowY = "auto"; // Hide loading screen
-            AOS.init();
-            AOS.refresh();
-            particlesJS.load('particles-js', 'assets/particles.json', function () {
-                console.log('callback - particles.js config loaded');
-            });
-            particlesJS.load('particles-js2', 'assets/particles.json', function () {
-                console.log('callback - particles.js config loaded');
-            });
-            particlesJS.load('particles-js3', 'assets/particles.json', function () {
-                console.log('callback - particles.js config loaded');
-            });
 
 
+        AOS.init();
+        AOS.refresh();
+        particlesJS.load('particles-js', 'assets/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+        particlesJS.load('particles-js2', 'assets/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+        particlesJS.load('particles-js3', 'assets/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+        showLoadingScreen();
 
-        }, 3500)
+
 
         // var typed = new Typed('#typing', {
         //     strings: [`منهجيات مرنة  لتحليل احتياجاتك بشكل عميق، بهدف بناء حلول   رقمية  مبتكرة  قابلة للتحسين والنمو. نركز على تقديم حلول عالية الجودة ومتوافقة مع الأنظمة ومتطلبات    أمان   البيانات.`],
@@ -282,52 +279,32 @@ window.addEventListener("scroll", function () {
 
 
 
-// // Select particles.js container and all buttons
-// const particles = document.getElementById('particles-js');
-// const buttons = document.querySelectorAll('.btn');
 
-// // Add event listeners to dynamically disable pointer-events
-// buttons.forEach(button => {
-//     // When mouse enters the button
-//     button.addEventListener('mouseenter', () => {
-//         particles.style.pointerEvents = 'none'; // Disable particles interaction
-//     });
+// Function to check if the loading screen should be shown
+function showLoadingScreen() {
+    const HOUR_IN_MS = 3600000; // 1 hour in milliseconds
+    const lastVisit = localStorage.getItem('lastVisit'); // Get the last visit timestamp
 
-//     // When mouse leaves the button
-//     button.addEventListener('mouseleave', () => {
-//         particles.style.pointerEvents = 'auto'; // Re-enable particles interaction
-//     });
-// });
-// // Select particles.js container and all buttons
-// const particles2 = document.getElementById('particles-js2');
-// const buttons2 = document.querySelectorAll('.btn');
+    // Check if the user has visited before or if it's been more than 1 hour
+    if (!lastVisit || (Date.now() - lastVisit > HOUR_IN_MS)) {
+        // Show the loading screen
+        loadingScreen.style.display = "flex";
 
-// // Add event listeners to dynamically disable pointer-events
-// buttons2.forEach(button => {
-//     // When mouse enters the button
-//     button.addEventListener('mouseenter', () => {
-//         particles2.style.pointerEvents = 'none'; // Disable particles interaction
-//     });
+        // Save the current timestamp in localStorage
+        localStorage.setItem('lastVisit', Date.now());
 
-//     // When mouse leaves the button
-//     button.addEventListener('mouseleave', () => {
-//         particles.style.pointerEvents = 'auto'; // Re-enable particles interaction
-//     });
-// });
+        // Hide the loading screen after 3 seconds and show the content
+        setTimeout(() => {
+            loadingScreen.style.display = "none"; // Hide loading screen
+            document.body.style.overflowY = "auto"; // Hide loading screen
+            mainContent.style.display = "block";  // Show main content
+        }, 3000); // Adjust the duration of the loading screen as needed
+    } else {
+        // Directly show the content if within 1 hour
+        loadingScreen.style.display = "none"; // Hide loading screen
+        document.body.style.overflowY = "auto";
+        mainContent.style.display = "block";  // Show main content
+    }
+}
 
-// // Select particles.js container and all buttons
-// const particles3 = document.getElementById('particles-js3');
-// const buttons3 = document.querySelectorAll('.btn');
-
-// // Add event listeners to dynamically disable pointer-events
-// buttons3.forEach(button => {
-//     // When mouse enters the button
-//     button.addEventListener('mouseenter', () => {
-//         particles3.style.pointerEvents = 'none'; // Disable particles interaction
-//     });
-
-//     // When mouse leaves the button
-//     button.addEventListener('mouseleave', () => {
-//         particles3.style.pointerEvents = 'auto'; // Re-enable particles interaction
-//     });
-// });
+// Call the function on page load

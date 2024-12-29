@@ -332,11 +332,22 @@ header .swiper-slide {
         background: rgba(220, 224, 229, 0.20);
         backdrop-filter: blur(8.5px);
         overflow: hidden;
+        cursor: pointer;
     }
 
     .item:hover i {
         color: #62C4AA;
-        font-size: 38px;
+        /* font-size: 38px; */
+
+    }
+
+    .active.item i {
+        color: #62C4AA;
+        /* font-size: 38px; */
+    }
+
+    .active.item img {
+        filter: grayscale(0%);
 
     }
 
@@ -689,6 +700,7 @@ span.up:before {
     z-index: -1;
     transition: 0.8s;
     cursor: pointer;
+
 }
 
 span.up:hover:before {
@@ -840,4 +852,8 @@ span.up:hover:before {
 .up-all {
     position: relative;
     z-index: 9999;
+}
+
+#loading {
+    display: none;
 }
