@@ -833,7 +833,10 @@ span.up:hover:before {
     }
 
     p,
-    h3 {
+    h3,
+    li,
+    span,
+    h5 {
         color: #6B6B6B;
         font-size: 17px;
         font-weight: 400;
@@ -843,7 +846,7 @@ span.up:hover:before {
 
 
 .modal-body::-webkit-scrollbar {
-    width: 0px !important;
+    width: 4px !important;
     /* Set scrollbar width */
     height: 8px;
     /* Set scrollbar height */
