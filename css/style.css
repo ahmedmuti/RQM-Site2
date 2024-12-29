@@ -699,7 +699,7 @@ span.up:before {
     position: absolute;
     inset: 0;
     border-radius: 5px;
-    background-color: #0056b3;
+    background-color: #65ACB7;
     border: 1px solid rgba(4, 128, 129, 0.2549019608);
     z-index: -1;
     transition: 0.8s;
@@ -863,4 +863,9 @@ span.up:hover:before {
 
 #loading {
     display: none;
+}
+
+#particles-js {
+    pointer-events: none;
+
 }

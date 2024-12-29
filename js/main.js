@@ -127,12 +127,12 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
         particlesJS.load('particles-js', 'assets/particles.json', function () {
             console.log('callback - particles.js config loaded');
         });
-        particlesJS.load('particles-js2', 'assets/particles.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
-        particlesJS.load('particles-js3', 'assets/particles.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
+        // particlesJS.load('particles-js2', 'assets/particles.json', function () {
+        //     console.log('callback - particles.js config loaded');
+        // });
+        // particlesJS.load('particles-js3', 'assets/particles.json', function () {
+        //     console.log('callback - particles.js config loaded');
+        // });
         showLoadingScreen();
 
 
@@ -256,9 +256,6 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
     });
 }
 
-
-
-
 function scrollUp() {
     window.scrollTo(0, 0)
 }
@@ -274,10 +271,6 @@ window.addEventListener("scroll", function () {
 
     }
 });
-
-
-
-
 
 
 // Function to check if the loading screen should be shown
@@ -306,5 +299,3 @@ function showLoadingScreen() {
         mainContent.style.display = "block";  // Show main content
     }
 }
-
-// Call the function on page load
