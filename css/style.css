@@ -700,6 +700,14 @@ span.up:hover:before {
         margin: 10px 0;
     }
 
+    p {
+        color: #3D5579;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: -0.198px;
+    }
+
     span {
         width: 36px;
         height: 36px;
