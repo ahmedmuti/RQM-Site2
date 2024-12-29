@@ -705,6 +705,13 @@ span.up:hover:before {
 }
 
 
+/* Swiper Content Layer */
+.swiper {
+    position: relative;
+    z-index: 1;
+    /* Foreground layer */
+}
+
 
 /* how we work */
 #how-works {
@@ -828,4 +835,9 @@ span.up:hover:before {
     /* Set scrollbar width */
     height: 8px;
     /* Set scrollbar height */
+}
+
+.up-all {
+    position: relative;
+    z-index: 9999;
 }
