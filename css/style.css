@@ -294,8 +294,23 @@ header .swiper-slide {
     color: #fff;
     padding: 8px 17px;
     z-index: 99999999;
+    transition: 0.3s !important;
 }
 
+.btn {
+    color: #FFF;
+    font-size: 20px
+}
+
+.btn1 {
+    background-color: #65ACB7;
+}
+
+.call-us:hover {
+    box-shadow: 0px 0px 0px 2.5px #fff, 0px 0px 0px 5px #65ACB7, 0px 0px 0px 10px white, 0px 0px 0px 10.5px #65ACB7;
+    background: white;
+    color: #fff;
+}
 
 /* section 2 */
 /* services */
