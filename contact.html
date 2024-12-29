@@ -122,6 +122,29 @@
             letter-spacing: -0.176px;
         }
     </style>
+    <style>
+        .is-active {
+            border-color: green;
+            /* background-color: #e6ffe6; */
+        }
+
+        .is-inactive {
+            border-color: red;
+            /* background-color: #ffe6e6; */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .text-red-500 {
+            color: #f56565;
+        }
+
+        #overlay {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -251,46 +274,72 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-section h-100">
-                                <form>
+                                <form id="contactForm" novalidate>
+                                    <div id="customAlert"
+                                        class="hidden fixed alert alert-success shadow-lg text-center">
+
+                                        <p class=" font-bold mt-2" id="customAlertMessage">تم إرسال النموذج بنجاح!</p>
+
+                                    </div>
                                     <div class="row gy-3">
                                         <div class="col-lg-6">
                                             <label for="name" class="form-label">الاسم</label>
                                             <input type="text" id="name" class="form-control" placeholder="الاسم">
+                                            <small class="text-danger hidden" id="nameError">الاسم مطلوب</small>
+
                                         </div>
                                         <div class="col-lg-6">
                                             <label for="email" class="form-label">البريد الإلكتروني</label>
                                             <input type="email" id="email" class="form-control"
                                                 placeholder="البريد الإلكتروني">
+                                            <small class="text-danger hidden" id="emailError">البريد الإلكتروني غير
+                                                صالح</small>
+
                                         </div>
                                         <div class="col-lg-6">
                                             <label for="phone" class="form-label">رقم الجوال</label>
                                             <div class="input-group">
                                                 <input type="tel" id="phone" class="form-control"
                                                     placeholder="5xxxxxxxx">
-                                                <span class="input-group-text">+966</span>
+                                                <span class="input-group-text">966+</span>
                                             </div>
+                                            <small class="text-danger hidden" id="phoneError">رقم الجوال مطلوب</small>
+
                                         </div>
                                         <div class="col-lg-6">
                                             <label for="service" class="form-label">نوع الخدمة</label>
                                             <select id="service" class="form-select">
-                                                <option selected disabled hidden>اختر ..</option>
+                                                <option selected disabled hidden value="">اختر ..</option>
                                                 <option>بناء الحلول الرقمية المتقدمة</option>
                                                 <option>استشارات التحول الرقمي</option>
                                                 <option>خدمات الأمن السيبراني</option>
                                                 <option>موضوع آخر</option>
                                             </select>
+                                            <small class="text-danger hidden" id="serviceError">نوع الخدمة مطلوب</small>
+
                                         </div>
                                         <div class="mb-3">
-                                            <label for="message" class="form-label">وصف الرسالة</label>
-                                            <textarea id="message" class="form-control" rows="4"
+                                            <label for="msg" class="form-label">وصف الرسالة</label>
+                                            <textarea id="msg" class="form-control" rows="4"
                                                 placeholder="الرسالة"></textarea>
+                                            <small class="text-danger hidden" id="msgError">وصف الرسالة مطلوب</small>
+
                                         </div>
                                         <div class="mb-3">
-                                            <input type="checkbox" id="terms">
-                                            <label for="terms" class="terms">موافق على <a data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal" href="#"
-                                                    style="color: #65ACB7;">سياسة الخصوصية</a></label>
+                                            <div class=" d-flex align-items-center gap-1">
+                                                <input type="checkbox" id="terms">
+                                                <label for="terms" class="terms">موافق على <a data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal" href="#"
+                                                        style="color: #65ACB7;">سياسة الخصوصية</a></label>
+
+                                            </div>
+                                            <div>
+                                                <small class="text-danger hidden" id="termsError">برجاء الموافقة علي
+                                                    سياسة
+                                                    الخصوصية</small>
+                                            </div>
                                         </div>
+
                                     </div>
                                     <div class="mb-3">
                                         <p class="terms">سيتم حفظ معلوماتك الشخصية في قاعدة بيانات رقم، وتتضمن هذه
@@ -301,7 +350,7 @@
                                             الإفصاح عنها لأي طرف ثالث إلا بحسب ما تتطلبه الأنظمة و/أو بطلب منك. للمزيد
                                             من
                                             المعلومات، يرجى التواصل معنا.</p>
-                                        <button type="submit" class="call-us ">إرسال</button>
+                                        <button type="submit" id="submit" class="call-us ">إرسال</button>
                                     </div>
                                 </form>
                             </div>
@@ -315,6 +364,7 @@
         </div>
     </div>
 
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 "></div>
 
 
 
@@ -404,9 +454,167 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 
     <script src="./js/main.js"></script>
 
+
+
+
+
+    <script>
+        emailjs.init("sm99eRkeS62c1pa5k"); // Replace with your EmailJS user ID
+
+        const contactForm = document.getElementById("contactForm");
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const serviceInput = document.getElementById("service");
+        const msgInput = document.getElementById("msg");
+        const termsInput = document.getElementById("terms");
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const phoneError = document.getElementById("phoneError");
+        const serviceError = document.getElementById("serviceError");
+        const msgError = document.getElementById("msgError");
+        const termsError = document.getElementById("termsError");
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function validateField(input, errorElement, validationFn) {
+            if (!validationFn(input.value)) {
+                input.classList.add("is-inactive");
+                input.classList.remove("is-active");
+                errorElement.classList.remove("hidden");
+                return false;
+            } else {
+                input.classList.remove("is-inactive");
+                input.classList.add("is-active");
+                errorElement.classList.add("hidden");
+                return true;
+            }
+        }
+
+        // Event Listeners for Blur and Input
+        nameInput.addEventListener("blur", () => validateField(nameInput, nameError, value => value.trim() !== ""));
+        nameInput.addEventListener("input", () => validateField(nameInput, nameError, value => value.trim() !== ""));
+
+        emailInput.addEventListener("blur", () => validateField(emailInput, emailError, value => emailPattern.test(value.trim())));
+        emailInput.addEventListener("input", () => validateField(emailInput, emailError, value => emailPattern.test(value.trim())));
+
+        phoneInput.addEventListener("blur", () => validateField(phoneInput, phoneError, value => value.trim() !== ""));
+        phoneInput.addEventListener("input", () => validateField(phoneInput, phoneError, value => value.trim() !== ""));
+
+        serviceInput.addEventListener("blur", () => validateField(serviceInput, serviceError, value => value.trim() !== ""));
+        serviceInput.addEventListener("input", () => validateField(serviceInput, serviceError, value => value.trim() !== ""));
+
+        termsInput.addEventListener("change", () => {
+            if (!termsInput.checked) {
+                termsError.style.display = "inline"; // Show error message
+            } else {
+                termsError.style.display = "none"; // Hide error message
+            }
+        });
+
+
+        msgInput.addEventListener("blur", () => validateField(msgInput, msgError, value => value.trim() !== ""));
+        msgInput.addEventListener("input", () => validateField(msgInput, msgError, value => value.trim() !== ""));
+
+        // Form Submit Handler
+        // Function to show the custom alert
+        function showCustomAlert(message, isError) {
+            const alertBox = document.getElementById('customAlert');
+            const overlay = document.getElementById('overlay');
+            const alertMessage = document.getElementById('customAlertMessage');
+            alertMessage.innerText = message; // Set custom message
+            alertBox.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+            if (isError) {
+                alertBox.style.backgroundColor = '#f8d7da'
+                alertBox.style.color = '#58151c'
+            }
+            // Automatically hide the alert after 1 second
+            setTimeout(() => {
+                closeCustomAlert();
+            }, 2000);
+        }
+
+        // Function to close the custom alert
+        function closeCustomAlert() {
+            document.getElementById('customAlert').classList.add('hidden');
+            document.getElementById('overlay').classList.add('hidden');
+        }
+
+        // Function to clear all form inputs
+        function clearFormInputs() {
+            nameInput.value = '';
+            emailInput.value = '';
+            phoneInput.value = '';
+            serviceInput.value = '';
+            msgInput.value = '';
+            // Reset the classes
+            nameInput.classList.remove('is-active', 'is-inactive');
+            emailInput.classList.remove('is-active', 'is-inactive');
+            phoneInput.classList.remove('is-active', 'is-inactive');
+            serviceInput.classList.remove('is-active', 'is-inactive');
+            msgInput.classList.remove('is-active', 'is-inactive');
+        }
+        contactForm.addEventListener("submit", e => {
+            e.preventDefault();
+            document.getElementById('submit').innerHTML = 'جاري..'
+            if (!termsInput.checked) {
+                termsError.style.display = "inline"; // Show error message
+            } else {
+                termsError.style.display = "none"; // Hide error message
+            }
+            const isNameValid = validateField(nameInput, nameError, value => value.trim() !== "");
+            const isEmailValid = validateField(emailInput, emailError, value => emailPattern.test(value.trim()));
+            const isphoneValid = validateField(phoneInput, phoneError, value => value.trim() !== "");
+            const isserviceValid = validateField(serviceInput, serviceError, value => value.trim() !== "");
+            const isMsgValid = validateField(msgInput, msgError, value => value.trim() !== "");
+            if (isNameValid && isEmailValid && isphoneValid && isMsgValid) {
+
+
+                const templateParams = {
+                    name: nameInput.value,
+                    email: emailInput.value,
+                    phone: phoneInput.value,
+                    service: serviceInput.value,
+                    message: msgInput.value
+                };
+
+                emailjs.send("service_tfmfuvl", "template_4oax0vq", templateParams)
+                    .then(response => {
+                        showCustomAlert("تم إرسال النموذج بنجاح!", false);
+                        document.getElementById('submit').innerHTML = 'إرسال'
+
+                        clearFormInputs();
+
+                    }, error => {
+                        showCustomAlert("حدث خطأ أثناء إرسال النموذج.", true);
+                        document.getElementById('submit').innerHTML = 'إرسال'
+
+                        console.error("Error:", error);
+                    });
+
+            } else {
+                // Trigger blur event for all invalid fields
+                document.getElementById('submit').innerHTML = 'إرسال'
+
+                if (!isNameValid) nameInput.blur();
+                if (!isEmailValid) emailInput.blur();
+                if (!isphoneValid) phoneInput.blur();
+                if (!isMsgValid) msgInput.blur();
+            }
+        });
+
+
+
+
+    </script>
 </body>
 
 </html>
