@@ -696,11 +696,11 @@ span.up:hover:before {
     cursor: pointer;
 }
 
-.hide {
+.up.hide {
     transform: translateX(100px);
 }
 
-.show {
+.up.show {
     transform: translateX(10px);
 }
 
