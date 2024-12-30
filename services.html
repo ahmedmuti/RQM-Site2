@@ -170,6 +170,13 @@
             letter-spacing: -0.198px;
         }
     </style>
+    <style>
+        .service-content .layer {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(95, 187, 177, 0.60) 0%, rgba(0, 161, 255, 0.60) 100%);
+        }
+    </style>
 </head>
 
 <body>
@@ -341,6 +348,7 @@
                 <div class="col-md-8 ">
                     <div id="service1" class="service-content">
                         <div class="image-container position-relative">
+                            <div class="layer"></div>
                             <img src="./imgs/services/1.svg" alt="Digital Services">
                             <div class="overlay position-absolute m-3 ">
                                 <h4>بناء الحلول الرقمية المتكاملة</h4>
@@ -365,13 +373,14 @@
                                 خدمات واجهات وتجربة المستخدم
                             </div>
                             <div class="service-item">
-                                خدمات الحوسبة السحابية التشغيلية DevSecOps
+                                خدمات الحوسبة السحابية
                             </div>
                         </div>
                     </div>
 
                     <div id="service2" class="service-content my-5 py-5">
                         <div class="image-container position-relative">
+                            <div class="layer"></div>
                             <img src="./imgs/services/2.svg" alt="Digital Services">
                             <div class="overlay position-absolute m-3 ">
                                 <h4>الامن السيبراني</h4>
@@ -399,16 +408,23 @@
                                         <h3 class="mb-5">نجعل أعمالك أكثر أمانًا
                                         </h3>
                                         <div class="service-item">
-                                            حماية بياناتك: نضمن سرية وسلامة بياناتك.
+                                            تقييم الثغرات الأمنية والاختبار (VAPT) : كشف نقاط الضعف واختبار الأنظمة
+                                            وتقييم الثغرات
+
                                         </div>
                                         <div class="service-item">
-                                            تعزيز الثقة: نبنيك صورة شركة موثوقة وآمنة.
+                                            مراجعة الشيفرة المصدرية (Source Code Review): تحليل الشيفرة لتحديد الثغرات
+                                            وتعزيز الأمان
                                         </div>
                                         <div class="service-item">
-                                            الاستمرارية التشغيلية: نضمن استمرارية أعمالك دون انقطاع.
+                                            مراجعة معمارية وتكوين الأنظمة (HLD): تقييم التصميم لضمان التوافق مع أفضل
+                                            الممارسات لتعزيز الحماية
                                         </div>
                                         <div class="service-item">
-                                            النمو الآمن: ندعم نموك الرقمي بأمان تام.
+                                            فريق الهجوم الأحمر (Red Team) محاكاة هجمات لتقييم الدفاعات
+                                        </div>
+                                        <div class="service-item">
+                                            الاستجابة للحوادث (DFIR) معالجة الحوادث الأمنية وتحليل الأنظمة جنائيًا
                                         </div>
                                     </div>
                                 </div>
@@ -416,17 +432,40 @@
                                 <div class="tab-pane " id="tab2" role="tabpanel" aria-labelledby="profile-tab"
                                     tabindex="0">
                                     <div class="container">
-                                        <p>نضمن استمرارية أعمالك ونحمي بياناتك. نقدم حلولًا شاملة لإدارة <br> المخاطر،
-                                            والامتثال،
-                                            واستمرارية الأعمال.</p>
+                                        <div class="service-item">
+                                            إدارة استمرارية الأعمال: ضمان استمرارية العمليات أثناء الأزمات
+                                        </div>
+                                        <div class="service-item">
+                                            إدارة مخاطر الأطراف الخارجية: تقييم الموردين والشركا
+                                        </div>
+                                        <div class="service-item">
+                                            تصنيف البيانات وحمايتها: وضع سياسات لحماية البيانات
+                                        </div>
+                                        <div class="service-item">
+                                            استراتيجية وخارطة طريق أمن المعلومات: تطوير خطط استباقية للأمن.
+                                        </div>
+                                        <div class="service-item">
+                                            خدمات الالتزام (GRC): ضمان الامتثال للمعايير الدولية والإقليمية.
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="tab-pane " id="tab3" role="tabpanel" aria-labelledby="contact-tab"
                                     tabindex="0">
                                     <div class="container">
-                                        <p>نُعزز كفاءات فريقك. نوفر تدريبًا متخصصًا، استشارات مهنية، <br> وورش عمل مخصصة
-                                            لتطوير مهارات موظفيك.</p>
+                                        <div class="service-item">
+                                            تدريب متخصص: برامج تدريبية للحصول على شهادات احترافية.
+                                        </div>
+                                        <div class="service-item">
+                                            استشارات مهنية: تخطيط المسارات المهنية وتقييم القدرات الفنية والمعرفية
+                                            للموظفين
+                                        </div>
+                                        <div class="service-item">
+                                            ورش عمل مخصصة: تصميم وتنفيذ ورش عمل تناسب احتياجات العملاء.
+                                        </div>
+                                        <div class="service-item">
+                                            تدريب الفرق (Red,Blue Team) :تعزيز القدرات الدفاعية والهجومية.
+                                        </div>
                                     </div>
                                 </div>
 
@@ -439,6 +478,8 @@
 
                     <div id="service3" class="service-content">
                         <div class="image-container position-relative">
+                            <div class="layer"></div>
+
                             <img src="./imgs/services/3.svg" alt="Digital Services">
                             <div class="overlay position-absolute m-3 ">
                                 <h4>استشارات التحول الرقمي </h4>
