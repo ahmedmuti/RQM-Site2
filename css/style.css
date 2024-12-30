@@ -770,9 +770,9 @@ span.up:hover:before {
     .row .row:after {
         content: "";
         position: absolute;
-        top: 141px;
+        top: 156px;
         width: 3px;
-        height: 545px;
+        height: 74%;
         flex-shrink: 0;
         background: rgba(101, 172, 183, 0.20);
         left: 50%;
@@ -780,35 +780,36 @@ span.up:hover:before {
 
     .svg1 {
         right: -11px;
-        top: -2px;
+        top: 13.2px;
     }
 
     .svg2 {
-        left: 56.4px;
-        top: 23.5px;
+        left: 12.4%;
+        top: 32.5px;
         z-index: 1;
     }
 
     .svg3 {
         right: -12px;
-        top: -1.9px;
+        top: 13.1px;
+        z-index: 1;
     }
 
     .svg4 {
-        left: 56px;
+        left: 12.4%;
 
-        top: 23.9px;
+        top: 32.9px;
         z-index: 1;
     }
 
     .line-1-3 {
         left: -27px;
-        top: 40.5px;
+        top: 55.5px;
     }
 
     .line-2-4 {
         right: -93px;
-        top: 66px;
+        top: 75px;
     }
 
     @media (max-width:1100px) {
