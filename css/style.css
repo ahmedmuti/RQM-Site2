@@ -869,3 +869,7 @@ span.up:hover:before {
     pointer-events: none;
 
 }
+
+#typing {
+    min-height: 60px !important;
+}
