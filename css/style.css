@@ -293,7 +293,8 @@ header .swiper-slide {
 
 .call-us {
     border-radius: 6px;
-    background: #65ACB7 !important;
+    /* background: #65ACB7 !important; */
+    background: var(--01, linear-gradient(90deg, #62C4AA 0.03%, #4C89D5 100.03%)) !important;
     border: none;
     color: #fff;
     padding: 8px 17px;
