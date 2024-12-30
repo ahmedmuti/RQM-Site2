@@ -179,7 +179,7 @@ if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith(
                 spaceBetween: 25,
             },
             1400: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 30,
             },
         },
